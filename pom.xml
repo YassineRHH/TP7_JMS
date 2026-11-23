@@ -13,5 +13,26 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+    <dependencies>
+        <!-- Client JMS ActiveMQ : ActiveMQConnectionFactory, API javax.jms
+       (Producer / Consumer) -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-client</artifactId>
+            <version>5.19.1</version>
+        </dependency>
+        <!-- Broker ActiveMQ : classe BrokerService, nécessaire pour le
+       broker embarqué (EmbededActiveMQ) -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-broker</artifactId>
+            <version>5.19.1</version>
+        </dependency>
+        <!-- Journalisation (évite l'avertissement SLF4J au démarrage) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+    </dependencies>
 </project>
